@@ -1,7 +1,5 @@
 ---
 layout: project
-title: "Custom Translator"
-description: "It translates languages using Microsoft Azure Translator."
 ---
 
 # Custom Translator
