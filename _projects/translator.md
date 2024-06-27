@@ -20,5 +20,5 @@ Check out the GitHub Repository or view the Live Demo.
 
 ## Links
 
-- [Live Demo](https://custom-translator.vercel.app/)
-- [GitHub Repository](https://github.com/JKP43/custom_translator)
+- <a href="https://translator-app.vercel.app" target="_blank">Live Demo</a>
+- <a href="https://github.com/username/translator-app" target="_blank">GitHub Repository</a>
