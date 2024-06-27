@@ -1,6 +1,3 @@
-# Project Portfolio
-Showcasing all of my projects!
-
 ---
 layout: default
 title: "My Portfolio"
