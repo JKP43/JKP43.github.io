@@ -14,4 +14,3 @@ Hello! My name is Jin, and this is my portfolio. Here, you'll find a collection 
 
   Read More
 {% endfor %}
-
