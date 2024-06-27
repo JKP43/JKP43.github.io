@@ -1,8 +1,9 @@
 ---
 layout: default
 title: "Custom Calculator"
+description: "Calculator made to my preference"
 ---
 
 # Calculator
 
-Hello! My name is Jin, and this is my portfolio. Here, you'll find a 
+This is a calculator that I made so I can customize it how I want it to function.
