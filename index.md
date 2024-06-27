@@ -7,12 +7,11 @@ title: "My Portfolio"
 
 Hello! My name is Jin, and this is my portfolio. Here, you'll find a collection of my projects, along with descriptions and links to the project pages.
 
-{% raw %}
 {% for project in site.projects %}
 - {{ project.title }}
 
-{{ project.description }}
+  {{ project.description }}
 
-Read More
+  Read More
 {% endfor %}
-{% endraw %}
+
