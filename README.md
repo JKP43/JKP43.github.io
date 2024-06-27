@@ -1,15 +1,3 @@
----
-layout: default
-title: "My Portfolio"
----
+# Project Portfolio
 
-# My Portfolio
-
-{% for project in site.projects %}
-## {{ project.title }}
-
-{{ project.description }}
-
-Read More
-{% endfor %}
-
+Utilized github pages to showcase my projects.
