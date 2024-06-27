@@ -1,0 +1,18 @@
+title: Project Portfolio
+email: parkjinny6@gmail.com
+description: >-
+  Showcasing all of the projects
+baseurl: ""
+github_username: JKP43
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
