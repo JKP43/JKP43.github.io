@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Custom Translator
+title: "Custom Translator"
 ---
 
 # Custom Translator
