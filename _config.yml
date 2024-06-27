@@ -10,9 +10,3 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:name/
