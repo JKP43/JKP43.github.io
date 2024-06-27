@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Custom Translator"
-desription: "Translates inputted text and can download translated text"
+description: "Translates inputted text and can download translated text"
 ---
 
 # Custom Translator
