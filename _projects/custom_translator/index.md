@@ -1,5 +1,6 @@
 ---
 layout: project
+title: Custom Translator
 ---
 
 # Custom Translator
