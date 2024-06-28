@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# My Portfolio
+# Project Portfolio
 
 Hello! My name is Jin, and this is my portfolio. Here, you'll find a collection of my projects, along with descriptions and links to the project pages.
 
