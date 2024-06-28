@@ -17,3 +17,8 @@ There is an option to download the translated text as a txt file if you click Do
 !Project Screenshot
 
 Check out the GitHub Repository or view the Live Demo.
+
+## Links
+
+- <a href="https://custom-translator.vercel.app/" target="_blank">Live Demo</a>
+- <a href="https://github.com/JKP43/custom_translator" target="_blank">GitHub Repository</a>
