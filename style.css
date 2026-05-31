@@ -92,6 +92,15 @@ h2 {
   color: #555;
 }
 
+.about-details a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.about-details a:hover {
+  text-decoration: underline;
+}
+
 /* EXPERIENCE */
 .experience-list {
   display: flex;
@@ -335,6 +344,20 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  display: block;
+}
+
+.img-caption {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #999;
+  text-align: center;
 }
 
 .github-button {
