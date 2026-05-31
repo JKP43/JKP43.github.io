@@ -167,76 +167,96 @@ section > h2 {
   font-size: 15px;
 }
 
-/* SKILLS */
+/* SKILLS — word cloud */
 .skills-hint {
   font-size: 13px;
   color: #999;
-  margin: -16px 0 20px;
+  margin: -16px 0 28px;
 }
 
-.skills-section {
+.word-cloud {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
-  align-items: flex-start;
+  gap: 14px 18px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
 }
 
-.skill-card {
-  width: 160px;
-  padding: 20px;
-  background: white;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  cursor: default;
-  border-top: 3px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+/* Shared base for both skills and projects */
+.cloud-skill,
+.cloud-project {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 9px 18px;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, opacity 0.2s ease,
+              background 0.2s ease, color 0.2s ease,
+              border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.13);
-  border-top-color: #0070f3;
-}
-
-.project-popup {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  text-align: left;
-  margin: 0 -20px -20px;
-  padding: 0 16px;
-}
-
-.skill-card:hover .project-popup {
-  max-height: 200px;
-}
-
-.popup-label {
-  margin: 12px 0 6px;
-  font-size: 11px;
+/* Skills — bold, blue-tinted boxes */
+.cloud-skill {
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #999;
-  border-top: 1px solid #f0f0f0;
-  padding-top: 12px;
-}
-
-.project-popup a {
-  display: block;
-  text-decoration: none;
-  color: #222;
-  font-size: 13px;
-  padding: 5px 6px;
-  border-radius: 6px;
-  margin: 0 -6px 4px;
-  transition: background 0.15s, color 0.15s;
-}
-
-.project-popup a:hover {
+  color: #1e3a8a;
   background: #f0f4ff;
+  border-color: #c7d7fd;
+  cursor: default;
+  user-select: none;
+}
+
+/* Skill is directly hovered */
+.cloud-skill.active {
+  background: #0070f3;
+  border-color: #0070f3;
+  color: white;
+  transform: scale(1.18);
+  box-shadow: 0 4px 16px rgba(0,112,243,0.35);
+}
+
+/* Skill is highlighted because a related project is hovered */
+.cloud-skill.highlighted {
+  background: #e8f0fe;
+  border-color: #0070f3;
   color: #0070f3;
+  transform: scale(1.12);
+  box-shadow: 0 4px 12px rgba(0,112,243,0.18);
+}
+
+/* Projects — neutral muted boxes */
+.cloud-project {
+  font-size: 14px;
+  color: #999;
+  text-decoration: none;
+  background: white;
+  border-color: #e5e7eb;
+}
+
+/* Project is highlighted because a related skill is hovered */
+.cloud-project.highlighted {
+  background: #0070f3;
+  border-color: #0070f3;
+  color: white;
+  transform: scale(1.15);
+  box-shadow: 0 4px 16px rgba(0,112,243,0.35);
+}
+
+/* Project is directly hovered */
+.cloud-project.active {
+  background: #f0f4ff;
+  border-color: #0070f3;
+  color: #0070f3;
+  transform: scale(1.08);
+}
+
+/* Dim everything unrelated when any hover is active */
+.word-cloud.has-hover .cloud-skill:not(.active):not(.highlighted) {
+  opacity: 0.2;
+}
+
+.word-cloud.has-hover .cloud-project:not(.active):not(.highlighted) {
+  opacity: 0.2;
 }
 
 /* PROJECTS (index page) */

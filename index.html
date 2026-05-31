@@ -76,57 +76,21 @@
   <!-- SKILLS -->
   <section id="skills">
     <h2>Skills</h2>
-    <p class="skills-hint">Hover a skill to see related projects</p>
-    <div class="skills-section">
+    <p class="skills-hint">Hover a skill or project to see connections</p>
+    <div class="word-cloud">
 
-      <div class="skill-card">
-        <h3>Python</h3>
-        <div class="project-popup">
-          <p class="popup-label">Projects</p>
-          <a href="project-recycling.html">Autonomous AI for Recycling</a>
-          <a href="project-database.html">Database Website</a>
-        </div>
-      </div>
+      <!-- Skills: data-name = unique id, data-links = comma-separated project ids -->
+      <span class="cloud-skill" data-name="python"   data-links="recycling,database" style="font-size:28px">Python</span>
+      <span class="cloud-skill" data-name="kotlin"   data-links="moodtunes"          style="font-size:24px">Kotlin</span>
+      <span class="cloud-skill" data-name="aws"      data-links="recycling"          style="font-size:22px">AWS</span>
+      <span class="cloud-skill" data-name="rest-api" data-links="moodtunes"          style="font-size:20px">REST API</span>
+      <span class="cloud-skill" data-name="sql"      data-links="database"           style="font-size:22px">SQL</span>
+      <span class="cloud-skill" data-name="flask"    data-links="database"           style="font-size:20px">Flask</span>
 
-      <div class="skill-card">
-        <h3>Kotlin</h3>
-        <div class="project-popup">
-          <p class="popup-label">Projects</p>
-          <a href="project-moodtunes.html">Mood Tunes</a>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>AWS</h3>
-        <div class="project-popup">
-          <p class="popup-label">Projects</p>
-          <a href="project-recycling.html">Autonomous AI for Recycling</a>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>REST API</h3>
-        <div class="project-popup">
-          <p class="popup-label">Projects</p>
-          <a href="project-moodtunes.html">Mood Tunes</a>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>SQL</h3>
-        <div class="project-popup">
-          <p class="popup-label">Projects</p>
-          <a href="project-database.html">Database Website</a>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h3>Flask</h3>
-        <div class="project-popup">
-          <p class="popup-label">Projects</p>
-          <a href="project-database.html">Database Website</a>
-        </div>
-      </div>
+      <!-- Projects: data-id = project id, data-skills = comma-separated skill names -->
+      <a class="cloud-project" data-id="recycling" data-skills="python,aws"      href="project-recycling.html">AI for Recycling</a>
+      <a class="cloud-project" data-id="moodtunes" data-skills="kotlin,rest-api" href="project-moodtunes.html">Mood Tunes</a>
+      <a class="cloud-project" data-id="database"  data-skills="python,sql,flask" href="project-database.html">Database Website</a>
 
     </div>
   </section>
@@ -176,6 +140,48 @@
 
     </div>
   </section>
+
+  <script>
+    const cloud = document.querySelector('.word-cloud');
+    const skills = document.querySelectorAll('.cloud-skill');
+    const projects = document.querySelectorAll('.cloud-project');
+
+    skills.forEach(skill => {
+      const linkedProjects = skill.dataset.links.split(',');
+      skill.addEventListener('mouseenter', () => {
+        cloud.classList.add('has-hover');
+        skill.classList.add('active');
+        linkedProjects.forEach(id =>
+          document.querySelector(`.cloud-project[data-id="${id}"]`)?.classList.add('highlighted')
+        );
+      });
+      skill.addEventListener('mouseleave', () => {
+        cloud.classList.remove('has-hover');
+        skill.classList.remove('active');
+        linkedProjects.forEach(id =>
+          document.querySelector(`.cloud-project[data-id="${id}"]`)?.classList.remove('highlighted')
+        );
+      });
+    });
+
+    projects.forEach(project => {
+      const linkedSkills = project.dataset.skills.split(',');
+      project.addEventListener('mouseenter', () => {
+        cloud.classList.add('has-hover');
+        project.classList.add('active');
+        linkedSkills.forEach(name =>
+          document.querySelector(`.cloud-skill[data-name="${name}"]`)?.classList.add('highlighted')
+        );
+      });
+      project.addEventListener('mouseleave', () => {
+        cloud.classList.remove('has-hover');
+        project.classList.remove('active');
+        linkedSkills.forEach(name =>
+          document.querySelector(`.cloud-skill[data-name="${name}"]`)?.classList.remove('highlighted')
+        );
+      });
+    });
+  </script>
 
 </body>
 </html>
