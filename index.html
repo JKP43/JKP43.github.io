@@ -8,19 +8,77 @@
 </head>
 <body>
 
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
   <header>
     <h1>Jinkyoung Park</h1>
     <p>Computer Science graduate student at Oregon State University</p>
   </header>
 
-  <section>
-    <h2>Skills</h2>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-card">
+      <p>
+        Hi, I'm Jinkyoung, a Computer Science graduate student at Oregon State University
+        with a passion for building software that solves real-world problems. My interests span
+        machine learning, cloud infrastructure, and mobile development.
+      </p>
+      <p>
+        Before grad school I worked on data engineering projects, migrating large-scale datasets
+        across platforms and building ETL pipelines. Outside of coding I enjoy playing games, cooking,
+        and playing music.
+      </p>
+      <ul class="about-details">
+        <li><strong>Degree:</strong> MEng Computer Science — Oregon State University</li>
+        <li><strong>Interests:</strong> AI/ML, Cloud Computing, Mobile Apps</li>
+        <li><strong>Languages:</strong> Python, Kotlin, Java, SQL</li>
+        <li><strong>Contact:</strong> parkjinny6@gmail.com</li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-list">
+
+      <div class="experience-card">
+        <div class="exp-header">
+          <div>
+            <h3>Data Migration Contractor</h3>
+            <p class="exp-org">Oregon State University — Division of Research</p>
+          </div>
+          <span class="exp-date">2024</span>
+        </div>
+        <p class="exp-desc">
+          Hired to support the Division of Research's transition from one proposal management
+          platform to another. Responsible for extracting, cleaning, and validating legacy data
+          records to ensure accurate transfer into the new system, minimizing disruption to
+          ongoing research administration workflows.
+        </p>
+        <div class="tags">
+          <span>Python</span>
+          <span>Data Cleaning</span>
+          <span>ETL</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
     <div class="skills-section">
       <div class="skill-card">
         <h3>Python</h3>
         <div class="project-popup">
-          <p>Data Migration Project</p>
           <p>Autonomous AI for Recycling</p>
         </div>
       </div>
@@ -45,6 +103,54 @@
           <p>Mood Tunes</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Autonomous AI for Recycling</h3>
+        <p>Built a computer-vision pipeline that classifies recyclable materials in real time
+           using a custom-trained model deployed on AWS, enabling smarter waste sorting.</p>
+        <div class="tags">
+          <span>Python</span>
+          <span>AWS</span>
+          <span>Computer Vision</span>
+        </div>
+        <a class="github-link" href="https://github.com/osu-ai-recycling/ai-recycling" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Mood Tunes</h3>
+        <p>An Android app that detects the user's current mood via a short quiz and curates
+           a personalized playlist by querying a music REST API — built natively in Kotlin.</p>
+        <div class="tags">
+          <span>Kotlin</span>
+          <span>Android</span>
+          <span>REST API</span>
+        </div>
+        <a class="github-link" href="https://github.com/JKP43/final-project-moodtunes" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Database Website</h3>
+        <p class="project-course">CS 340 — Introduction to Databases · Oregon State University</p>
+        <p>
+          A full-stack web application that manages
+          data using a relational database. Supports full CRUD operations through a
+          browser-based interface backed by a MySQL database."]
+        </p>
+        <div class="tags">
+          <span>Python</span>
+          <span>MySQL</span>
+          <span>Flask</span>
+        </div>
+        <a class="github-link" href="https://github.com/JKP43/340_sql_project" target="_blank">View on GitHub →</a>
+      </div>
+
     </div>
   </section>
 
