@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: #f8f9fa;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  position: relative;
+  width: 180px;
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-popup {
+  display: none;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 230px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: left;
+  z-index: 10;
+}
+
+.skill-card:hover .project-popup {
+  display: block;
+}
+
+.project-popup p {
+  margin: 8px 0;
+}
