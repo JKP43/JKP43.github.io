@@ -150,10 +150,10 @@ h2 {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .skill-card {
-  position: relative;
   width: 160px;
   padding: 20px;
   background: white;
@@ -161,59 +161,46 @@ h2 {
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   cursor: default;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-4px);
-}
-
-/* Transparent bridge fills the gap so mouse doesn't escape */
-.skill-card::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  right: 0;
-  height: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.13);
 }
 
 .project-popup {
-  display: none;
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 200px;
-  background: white;
-  border-radius: 12px;
-  padding: 12px 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
   text-align: left;
-  z-index: 10;
+  margin: 0 -20px -20px;
+  padding: 0 16px;
 }
 
 .skill-card:hover .project-popup {
-  display: block;
+  max-height: 200px;
 }
 
 .popup-label {
-  margin: 0 0 8px;
+  margin: 12px 0 6px;
   font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #999;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
 }
 
 .project-popup a {
   display: block;
   text-decoration: none;
   color: #222;
-  font-size: 14px;
-  padding: 6px 8px;
-  border-radius: 8px;
-  margin: 0 -8px;
+  font-size: 13px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  margin: 0 -6px 4px;
   transition: background 0.15s, color 0.15s;
 }
 
