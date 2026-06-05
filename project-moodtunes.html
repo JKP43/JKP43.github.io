@@ -19,7 +19,7 @@
       <div class="tags">
         <span>Kotlin</span>
         <span>Android</span>
-        <span>REST API</span>
+        <span>Jamendo API</span>
       </div>
     </div>
 
@@ -28,8 +28,9 @@
       <div class="detail-section">
         <h2>Overview</h2>
         <p>
-          An Android app that lets the users select their current mood via a short quiz and curates
-          a personalized playlist by querying a music REST API — built natively in Kotlin.
+         Mood Tunes is an Android music discovery app built with Kotlin and Gradle Kotlin DSL. 
+         The app fetches music tracks from the Jamendo API using Retrofit and Moshi, displays results in a RecyclerView-based interface, and allows users to save songs locally using Room. 
+         The project follows an MVVM-like structure with a repository layer that handles networking, local persistence, and time-based caching through Kotlin Coroutines.
         </p>
       </div>
 
@@ -83,7 +84,7 @@
 
       <div class="detail-section">
         <h2>What it does</h2>
-        <p>Users can choose their emotions based on the emojis on the cards, and it will fetch a recommended song from the Spotify API based on their selection.</p>
+        <p>Users can browse music fetched from the Jamendo API, view track information, load song artwork with Glide, and save favorite songs locally. Saved songs are stored in a Room database and displayed in a separate saved songs screen.</p>
       </div>
 
       <!-- <div class="detail-section">
@@ -94,9 +95,16 @@
       <div class="detail-section">
         <h2>Tech stack</h2>
         <ul>
-          <li><strong>Kotlin</strong> — native Android development</li>
-          <li><strong>REST API</strong> — Spotify</li>
+          <li><strong>Kotlin</strong></li>
+          <li><strong>Jamendo API</strong></li>
         </ul>
+        <h2>Architecture</h2>
+        <p>The app uses an MVVM-like architecture where the UI communicates with MusicViewModel,
+          which calls MusicRepository.
+          The repository manages API requests through Retrofit, parses
+          responses with Moshi, caches results using Kotlin Coroutines and Kotlin Time,
+          and stores saved songs locally with Room.
+        </p>
       </div>
 
       <a class="github-button" href="https://github.com/JKP43/final-project-moodtunes" target="_blank">
