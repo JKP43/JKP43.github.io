@@ -38,6 +38,19 @@ nav a:hover {
   color: #0070f3;
 }
 
+.nav-resume-btn {
+  background: #0070f3;
+  color: white !important;
+  padding: 6px 16px;
+  border-radius: 8px;
+  transition: opacity 0.2s !important;
+}
+
+.nav-resume-btn:hover {
+  color: white !important;
+  opacity: 0.85;
+}
+
 /* HEADER — dark hero */
 header {
   text-align: center;
@@ -117,6 +130,40 @@ section > h2 {
 
 .about-details a:hover {
   text-decoration: underline;
+}
+
+.resume-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.resume-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: #0070f3;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.resume-btn:hover {
+  opacity: 0.85;
+}
+
+.resume-btn-outline {
+  background: transparent;
+  color: #0070f3;
+  border: 2px solid #0070f3;
+}
+
+.resume-btn-outline:hover {
+  background: #f0f4ff;
+  opacity: 1;
 }
 
 /* EXPERIENCE */
