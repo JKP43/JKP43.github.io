@@ -1,0 +1,7 @@
+#!/bin/sh
+# Auto-bump the cache-busting ?v= on resume links whenever resume.pdf is committed.
+if git diff --cached --name-only | grep -qx 'resume.pdf'; then
+  v=$(git rev-parse --short=8 :resume.pdf)
+  sed -i "s/resume\.pdf?v=[A-Za-z0-9]*/resume.pdf?v=$v/g" index.html
+  git add index.html
+fi
